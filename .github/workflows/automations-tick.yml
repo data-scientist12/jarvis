@@ -1,0 +1,17 @@
+# Vercel Hobby cron runs once a day at most, so GitHub Actions pings the scheduler every 5 minutes.
+# Needs repo variable APP_URL (e.g. https://jarvisdoes.xyz) and repo secret CRON_SECRET.
+name: automations-tick
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    # Only runs on the main repo once APP_URL is configured (forks and unconfigured repos skip quietly).
+    if: ${{ vars.APP_URL != '' && github.repository_owner == 'data-scientist12' }}
+    steps:
+      - name: Run due automations
+        run: |
+          curl -fsS -X POST "${{ vars.APP_URL }}/api/cron/tick" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" --max-time 120

@@ -1,0 +1,21 @@
+# secrets
+.env
+.env*.local
+!.env.example
+# node / next
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+# macOS / Xcode (desktop companion)
+.DS_Store
+desktop/build/
+desktop/*.xcodeproj/
+xcuserdata/
+DerivedData/
+
+# local tooling
+.claude/
+*.log

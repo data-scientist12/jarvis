@@ -1,0 +1,28 @@
+name: Jarvis
+options:
+  bundleIdPrefix: com.siddharth
+  deploymentTarget:
+    macOS: "15.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: YOUR_TEAM_ID  # set your Apple Developer Team ID
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: "Apple Development"
+    ENABLE_HARDENED_RUNTIME: NO
+    MACOSX_DEPLOYMENT_TARGET: "15.0"
+targets:
+  Jarvis:
+    type: application
+    platform: macOS
+    sources:
+      - path: Jarvis
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.siddharth.jarvis
+        PRODUCT_NAME: Jarvis
+        INFOPLIST_FILE: Jarvis/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Jarvis/Jarvis.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: ""
+        COMBINE_HIDPI_IMAGES: YES

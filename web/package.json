@@ -1,0 +1,49 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "companion": "tsx companion/index.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^4.0.94",
+    "@ai-sdk/react": "^4.0.145",
+    "@upstash/ratelimit": "^2.2.0",
+    "@upstash/redis": "^1.39.0",
+    "ai": "^7.0.141",
+    "better-auth": "^1.7.9",
+    "clsx": "^2.1.1",
+    "cron-parser": "^5.10.2",
+    "drizzle-orm": "^0.45.4",
+    "googleapis": "^186.0.0",
+    "lucide-react": "^1.57.0",
+    "motion": "^14.2.0",
+    "next": "16.4.1",
+    "pg": "^8.23.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "server-only": "^0.0.1",
+    "tailwind-merge": "^3.7.0",
+    "zod": "^4.6.7",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.11",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.1",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}
